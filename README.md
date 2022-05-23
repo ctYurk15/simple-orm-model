@@ -59,5 +59,5 @@ Database data connection
     "pass": "root",
     "dbname": "testing-packages",
     "user": "root"
-}   echo $record->getId().' - '.$record->get('title').'<br>';
+}
 ```
