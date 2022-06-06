@@ -26,15 +26,11 @@ Here example of usage
 require __DIR__.'/vendor/autoload.php';
 use ctyurk15\SimpleOrmModel\Model;
 
-// create wrapper for database connection data (this is )
-// temprorarly solution
-class ORMWrapper extends Model
-{
-    public static $dbdata_path = 'dbdata.json';
-}
+//initialize database connection
+Model::init_conn('host', 'user', 'password', 'dbname');
 
 //create class for your table
-class ORM1 extends ORMWrapper
+class ORM1 extends Model
 {
     public static $table = 'orm1';
     public static $index_column = 'id';
